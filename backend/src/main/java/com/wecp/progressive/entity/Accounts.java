@@ -11,6 +11,9 @@ public class Accounts implements Comparable<Accounts>{
         this.customerID=customerID;
         this.balance=balance;
     }
+    public Accounts(){
+        
+    }
     public int getAccountID(){
         return accountID;
     }

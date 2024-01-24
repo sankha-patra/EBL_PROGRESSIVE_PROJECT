@@ -19,6 +19,9 @@ public class Customers implements Comparable<Customers>{
         this.password=password;
         this.role=role;
     }
+    public Customers(){
+        
+    }
 
     public int getCustomerID(){
         return customerID;
@@ -58,21 +61,21 @@ public class Customers implements Comparable<Customers>{
     }
 
     public int compareTo(Customers obj){
-        return this.getCustomerID()-obj.getCustomerID();
+        return this.getCustomerName().compareTo(obj.getCustomerName());
     }
 }
 
-class RoleCompare implements Comparator<Customers>{
-    public int compare(Customers a,Customers b){
-        return a.getCustomerRole().compareTo(b.getCustomerRole());
-    }
-}
+// class RoleCompare implements Comparator<Customers>{
+//     public int compare(Customers a,Customers b){
+//         return a.getCustomerRole().compareTo(b.getCustomerRole());
+//     }
+// }
 
-class PasswordCompare implements Comparator<Customers>{
-    public int compare(Customers a,Customers b){
-        return a.getCustomerPassword().compareTo(b.getCustomerPassword());
-    }
-}
+// class PasswordCompare implements Comparator<Customers>{
+//     public int compare(Customers a,Customers b){
+//         return a.getCustomerPassword().compareTo(b.getCustomerPassword());
+//     }
+// }
 
 class UserCompare implements Comparator<Customers>{
     public int compare(Customers a,Customers b){
